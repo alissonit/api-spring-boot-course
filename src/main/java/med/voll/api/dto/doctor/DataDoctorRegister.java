@@ -1,5 +1,6 @@
 package med.voll.api.dto.doctor;
 
+import med.voll.api.doctor.Specialty;
 import med.voll.api.dto.common.DataAddress;
 
 /*

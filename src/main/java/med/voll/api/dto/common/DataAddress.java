@@ -15,6 +15,7 @@
 
 package med.voll.api.dto.common;
 
-public record DataAddress(String public_place, String neighborhood, String cep, String city, String uf, String number, String complement ) {
+public record DataAddress(String public_place, String neighborhood, String cep, String city, String uf, String number,
+      String complement) {
 
 }

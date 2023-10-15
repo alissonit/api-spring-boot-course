@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/medicos")
-public class MedicoController {
+public class DoctorController {
 
     @PostMapping
     public void register(@RequestBody DataDoctorRegister data) {
