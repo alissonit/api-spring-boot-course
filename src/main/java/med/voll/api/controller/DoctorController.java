@@ -1,3 +1,6 @@
+/*
+ * DoctorController is a class that is used to control the doctor's data
+ */
 package med.voll.api.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;

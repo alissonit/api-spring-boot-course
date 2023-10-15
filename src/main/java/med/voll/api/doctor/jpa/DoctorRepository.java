@@ -1,3 +1,6 @@
+/*
+ * Repository is an interface that extends JpaRepository.
+ */
 package med.voll.api.doctor.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
