@@ -20,6 +20,9 @@ public record DataDoctorRegister(
 
         @NotBlank @Email String email,
 
+        @NotBlank
+        String phone,
+
         @NotNull Specialty specialty,
 
         @NotNull @Valid DataAddress address

@@ -25,7 +25,9 @@ public class DoctorController {
     private DoctorRepository repository;
 
     @PostMapping
-    // @Valid is used to validate the data
+    /* @Valid is used to validate the data
+    * https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html#builtinconstraints
+    */
     public void register(@RequestBody @Valid DataDoctorRegister data) {
         // This is a constructor is used to convert DataDoctorRegister to Doctor
         repository.save(new Doctor(data));
