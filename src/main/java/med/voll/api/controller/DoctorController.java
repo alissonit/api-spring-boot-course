@@ -6,6 +6,7 @@ package med.voll.api.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
 import med.voll.api.dto.doctor.DataDoctorRegister;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import med.voll.api.doctor.jpa.Doctor;
 import med.voll.api.doctor.jpa.DoctorRepository;
-
 
 @RestController
 @RequestMapping("/medicos")
@@ -25,9 +25,10 @@ public class DoctorController {
     private DoctorRepository repository;
 
     @PostMapping
-    public void register(@RequestBody DataDoctorRegister data) {
+    // @Valid is used to validate the data
+    public void register(@RequestBody @Valid DataDoctorRegister data) {
         // This is a constructor is used to convert DataDoctorRegister to Doctor
         repository.save(new Doctor(data));
     }
-    
+
 }

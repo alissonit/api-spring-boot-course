@@ -15,7 +15,18 @@
 
 package med.voll.api.dto.common;
 
-public record DataAddress(String public_place, String neighborhood, String cep, String city, String uf, String number,
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
+// @NotBlank is used to validate if the field is not blank
+public record DataAddress(
+
+      @NotBlank String public_place,
+      @NotBlank String neighborhood,
+      @NotBlank @Pattern(regexp = "\\d{8}") String cep,
+      @NotBlank String city,
+      @NotBlank String uf,
+      String number,
       String complement) {
 
 }
