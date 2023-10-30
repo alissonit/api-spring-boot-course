@@ -1,3 +1,5 @@
+// This class 
+
 package med.voll.api.address;
 
 import jakarta.persistence.Embeddable;
@@ -29,6 +31,30 @@ public class Address {
         this.uf = address.uf();
         this.number = address.number();
         this.complement = address.complement();
+    }
+
+    public void updateAddress(DataAddress address) {
+        if (address.public_place() != null) {
+            this.public_place = address.public_place();
+        }
+        if (address.neighborhood() != null) {
+            this.neighborhood = address.neighborhood();
+        }
+        if (address.cep() != null) {
+            this.cep = address.cep();
+        }
+        if (address.city() != null) {
+            this.city = address.city();
+        }
+        if (address.uf() != null) {
+            this.uf = address.uf();
+        }
+        if (address.number() != null) {
+            this.number = address.number();
+        }
+        if (address.complement() != null) {
+            this.complement = address.complement();
+        }
     }
 
 }
